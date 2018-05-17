@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transititonal//EN"
+""http://www.w3.org/TR/XHTML1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head></head>
+<body>
+
+<form name="TESTING">
+<table border="1" width="600" height="200" cellpadding="10" cellspacing="3">
+<tr><th colspan="2"><h1>TESTING</h1></th></tr>
+<tr>  <th><h3>INPUT</h3></th>
+<th><h3>OUTPUT</h3></th>    </tr>
+<tr></tr>
+ <input type="hidden" name="b0" value={{b0}}>
+  <input type="hidden" name="b1" value={{b1}}>
+<td><input type="number" name="INPUT1" id="input" onchange="calculate();"/></td>
+<td><input type="number" name="OUTPUT1" id="output"></td>
+<table>
+
+</form>
+
+<script type="text/javascript">
+function calculate() {
+
+var USERINPUT1 = document.TESTING.INPUT1.value;
+var USERINPUT11 = document.TESTING.b0.value;
+var USERINPUT12 = document.TESTING.b1.value;
+var CALC1 = USERINPUT1+USERINPUT11+USERINPUT12;
+
+document.TESTING.OUTPUT1.value = CALC1;
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table width="80%" border="0">
+      <tr>
+        <th>Box 1</th>
+        <th>Box 2</th>
+        <th>Result</th>
+      </tr>
+
+      <h2>Data updated successfully </h2>
+
+      <h3>error rate is {{r_error}}</h3>
+      <h3>please enter the independent varibale to predict the dependent variable</h3>
+      <tr>
+      <td><input type="hidden" id="b0" name="b0" value={{b0}}></td>
+      <td> <input type="hidden" id="b1" name="b1" value={{b1}}></td>
+
+        <td><input id="box1" type="text" oninput="calculate();" /></td>
+
+        <td><input id="result" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <script>
+
+
+        function calculate() {
+            var myBox1 = document.getElementById('box1').value;
+            var myBox2 = document.getElementById('b0').value;
+            var myBox3 = document.getElementById('b1').value;
+            var result = document.getElementById('result');
+            var myResult = myBox2+myBox1 * myBox3;
+              document.getElementById('result').value = myResult;
+
+        }
+    </script>
+
+  </body>
+</html>

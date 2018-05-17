@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type = "text/javascript">
+function write_below(form)
+{
+var input = document.forms.write.input_to_write.value;
+var input1 = document.forms.write.b0.value;
+var input2 = document.forms.write.b1.value;
+
+document.getElementById('write_here').innerHTML="Your input was:"+input+input1+input2;
+return false;
+}
+</script>
+</head>
+
+<!--Insert more code here-->
+<body>
+
+<form name='write' onsubmit='return write_below(this);'>
+<input type = "text" name='input_to_write'>
+<input type="" name="b0" value={{b0}}>
+<input type="" name="b1" value={{b1}}>
+<input type = "button" value = "submit"
+</form>
+<div id='write_here'></div></body>
+</html>
