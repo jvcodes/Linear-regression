@@ -3,7 +3,7 @@ from flask import Flask, request, redirect, url_for, send_from_directory,render_
 #from flask_mysqldb import MySQL
 from flaskext.mysql import MySQL
 #import linear_regrestion as lr
-import linear_regrestion as slr
+import linear_regrest as slr
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'static'
@@ -52,8 +52,8 @@ def upload_file():
             line_list[1]=int(line_list[1].replace('\'',''))
             line_list[0]=int(line_list[0])
             lisline.append(line_list)
-            li=a.split(',')
-            cursor.execute('INSERT INTO dataset(data1,data2) VALUES(%d,%s)'(int(line_list[0]),line_list[1]))
+            #li=a.split(',')
+            #cursor.execute('INSERT INTO dataset(data1,data2) VALUES(%d,%s)'(int(line_list[0]),line_list[1]))
 
 
         #print(fs)
@@ -61,12 +61,12 @@ def upload_file():
         file.seek(0)
         print(len(lisline))
         print(file.filename)
-        cursor.execute('select * from dataset')
-        data = cursor.fetchall()
-        data1=[]
-        for i in data:
-            data1.append(list(i))
-
+        #cursor.execute('select * from dataset')
+        #data = cursor.fetchall()
+        #data1=[]
+        #for i in data:
+        #    data1.append(list(i))
+        data1=dataset = [[1, 1], [2, 3], [4, 3], [3, 2], [5, 5]]
         r_error,b0,b1 = slr.evaluate_slope_constant(data1)
         print('RMSE: %.3f,%d,%d' % (r_error,int(b0),int(b1)))
 
