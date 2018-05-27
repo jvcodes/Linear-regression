@@ -9,10 +9,6 @@ from werkzeug.utils import secure_filename
 UPLOAD_FOLDER = 'static'
 ALLOWED_EXTENSIONS = set(['csv','xlsx'])
 
-mysql_host='localhost'
-mysql_user='root'
-mysql_pw='jaga9538'
-mysql_db='flaskapp'
 
 app = Flask(__name__)
 mysql = MySQL()
